@@ -25,4 +25,12 @@ public class Categoria implements Serializable {
 	
 	@Column(name="nombre")
 	private String nombre;
+	
+	public Categoria() {
+		
+	}
+	
+	public Categoria (String nombre) {
+		this.nombre = nombre;
+	}
 }

@@ -29,4 +29,13 @@ public class RedSocial implements Serializable{
 	
 	@Column(name="url")
 	private String url;
+	
+	public RedSocial () {
+		
+	}
+	
+	public RedSocial (String nombre , String url) {
+		this.nombre = nombre;
+		this.url = url;
+	}
 }

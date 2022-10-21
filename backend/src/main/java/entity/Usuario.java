@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,19 +34,18 @@ public class Usuario implements Serializable{
 	@Column(name="role")
 	private int role;
 	
-	//@Column(name="emprendimiento")
-	//private Emprendimiento emprendimiento;
+	@OneToOne
+	private Emprendimiento emprendimiento;
 	
 	public Usuario() {
 		
 	}
 	
-	//public Usuario (Long id , String username , String password , int role , Emprendimiento emprendimiento) {
 	public Usuario (Long id , String username , String password , int role , Emprendimiento emprendimiento) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.role = role;
-		//this.emprendimiento = emprendimiento;
+		this.emprendimiento = emprendimiento;
 	}
 }

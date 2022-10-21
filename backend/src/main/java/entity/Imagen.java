@@ -29,4 +29,13 @@ public class Imagen implements Serializable{
 	
 	@Column(name="nombre")
 	private String nombre;
+	
+	public Imagen () {
+		
+	}
+	
+	public Imagen (String direccion , String nombre) {
+		this.direccion = direccion;
+		this.nombre = nombre;
+	}
 }
